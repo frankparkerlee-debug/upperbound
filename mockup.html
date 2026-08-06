@@ -475,7 +475,7 @@
               reviews your full intake and decides what's appropriate. If we're not right
               for you, you don't pay.</p>
             <div class="rcta">
-              <a href="#how" class="btn btn-lg">Start your intake</a>
+              <a href="https://app.upperboundrx.com/intake" class="btn btn-lg" id="rgo">Start your intake</a>
               <button class="redo" id="fredo" type="button">↺ Start over</button>
             </div>
           </div>
@@ -887,6 +887,8 @@
     document.getElementById('rprice').textContent = p.price;
     document.getElementById('rwhy').textContent =
       p.who + ' Built for ' + ans[1].w + ', ' + ans[2].c + '.';
+    document.getElementById('rgo').href =
+      'https://app.upperboundrx.com/intake?pathway=' + ans[0].p;
     var rfw = document.getElementById('rfw');
     rfw.innerHTML = '<span class="fi fh">HOW IT STARTS</span>';
     p.fw.forEach(function(x){
@@ -908,7 +910,7 @@
     if(!d.innerHTML){
       d.innerHTML = '<p class="dwho"></p>'+
         '<div class="dmeta"><span class="m"></span><span class="m"></span><span class="m"></span>'+
-        '<a href="#how" class="btn">Start with '+P[key].name+'</a></div>';
+        '<a href="https://app.upperboundrx.com/intake?pathway='+key+'" class="btn">Start with '+P[key].name+'</a></div>';
       d.querySelector('.dwho').textContent = P[key].who;
       var ms = d.querySelectorAll('.m');
       ms[0].textContent = P[key].focus; ms[1].textContent = ARC;
