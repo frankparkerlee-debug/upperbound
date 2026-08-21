@@ -43,8 +43,9 @@ No pure black. No neon, no glow shadows — shadows are warm-tinted
   --oat:#F7F2E9; --paper:#FFFDF8; --sand:#EFE8D9; --ink:#26211A; --muted:#7B7365;
   --line:#E6DECC; --dot:#D0C6B1; --link:#4338B8;
   --sage:#DCE5D2; --sky:#D8E4EF; --butter:#F4E3B0; --blush:#EFDBCF; --banner:#F4D670;
-  --serif:"Hanken Grotesk",-apple-system,sans-serif; /* alias kept for legacy rules */
-  --sans:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --serif:"Satoshi",-apple-system,sans-serif; /* alias kept for legacy rules */
+  --sans:"Satoshi",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  /* load: <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet"> */
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 ```
@@ -57,8 +58,8 @@ Display and manifesto set in Satoshi **Black (900)**; headings 700; body 400–5
 
 | Level | Size | Weight | Tracking | Use |
 |---|---|---|---|---|
-| Display | clamp(42px, 5.3vw, 80px) | 700 | −0.03em | Hero h1 |
-| Manifesto | clamp(34px, 5.4vw, 76px) | 800 | −0.03em | Statement beats |
+| Display | clamp(42px, 5.3vw, 80px) | 900 | −0.03em | Hero h1 |
+| Manifesto | clamp(34px, 5.4vw, 76px) | 900 | −0.03em | Statement beats |
 | H2 | clamp(30px, 3.8vw, 52px) | 700 | −0.02em | Section titles |
 | Tile/H3 | 20–25px | 650 | −0.015em | Cards, steps |
 | Body | 15–17px | 400–500 | 0 | Copy; 65ch max |
@@ -130,7 +131,7 @@ anything naming the pharmacy or physicians.
 **Never:** medication names or imagery on marketing; outcome/marker claims;
 AI-generated faces; fabricated metrics or testimonials presented as real;
 prepay lock-in offers; serif typefaces; neon glows; centered heroes; equal
-uncolored card grids; Inter or Hanken Grotesk; **em dashes in any copy** (the
+uncolored card grids; Inter or Hanken Grotesk; **em dashes in any user-facing copy** (the
 definitive AI-writing tell — use commas, colons, or periods; " · " for label
 separators); fake stats or invented metrics.
 
