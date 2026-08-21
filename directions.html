@@ -41,33 +41,12 @@ a{color:inherit}
 .d-film{grid-column:span 7;grid-row:span 2;position:relative;border-radius:14px;overflow:hidden;background:#15140F;min-height:380px}
 .d-film video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 .d-film .cap{position:absolute;left:16px;bottom:14px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FBFAF7;background:rgba(21,20,15,.55);padding:7px 11px;border-radius:6px;backdrop-filter:blur(6px)}
-.d-arc{grid-column:span 5;background:linear-gradient(160deg,#234531 0%,#1A3526 60%,#152C1F 100%);color:#F4EFE4;border-radius:14px;padding:20px 22px 16px;display:flex;flex-direction:column;min-height:200px;border:1px solid rgba(232,180,79,.14)}
-.d-arc .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.d-arc h3{font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:#C9D4C2}
-.d-arc .badge{font-family:"Geist Mono",monospace;font-size:8.5px;letter-spacing:.14em;color:#8FA687;border:1px solid rgba(201,212,194,.3);padding:3px 8px;border-radius:999px}
-.d-arc svg{width:100%;height:auto;margin-top:4px}
-.d-arc .grid line{stroke:rgba(201,212,194,.12);stroke-width:1}
-.d-arc .wk{font-family:"Geist Mono",monospace;font-size:7.5px;letter-spacing:.08em;fill:rgba(201,212,194,.45)}
-.d-arc .phase{font-family:"Geist Mono",monospace;font-size:7.5px;letter-spacing:.16em;fill:rgba(232,180,79,.55)}
-.d-arc .phdiv{stroke:rgba(232,180,79,.18);stroke-width:1;stroke-dasharray:2 4}
-.d-arc .base{fill:none;stroke:rgba(201,212,194,.28);stroke-width:1.5;stroke-dasharray:3 6;stroke-linecap:round}
-.d-arc .basel{font-family:"Geist Mono",monospace;font-size:7.5px;letter-spacing:.08em;fill:rgba(201,212,194,.4)}
-.d-arc .area{fill:url(#arcfill);opacity:0;animation:pop 1.2s ease 1.9s forwards}
-.d-arc .halo{fill:none;stroke:#E8B44F;stroke-width:7;stroke-linecap:round;opacity:.18;stroke-dasharray:660;stroke-dashoffset:660;animation:draw 2.6s cubic-bezier(.2,.8,.2,1) .4s forwards}
-.d-arc .arcline{fill:none;stroke:url(#arcstroke);stroke-width:2.75;stroke-linecap:round;stroke-dasharray:660;stroke-dashoffset:660;animation:draw 2.6s cubic-bezier(.2,.8,.2,1) .4s forwards}
-.d-arc .ring{fill:none;stroke:#E8B44F;stroke-width:1.5;opacity:0;animation:pop .5s ease forwards}
-.d-arc .cp{fill:#F4EFE4;stroke:#152C1F;stroke-width:2;opacity:0;animation:pop .5s ease forwards}
-.d-arc .cp1{animation-delay:1.7s}.d-arc .cp2{animation-delay:2.7s}
-.d-arc .cpl{font-family:"Geist Mono",monospace;font-size:8px;letter-spacing:.1em;fill:#E8B44F;opacity:0;animation:pop .5s ease forwards}
-.d-arc .fine{font-size:10.5px;line-height:1.5;color:rgba(201,212,194,.55);margin-top:8px}
-.d-ledger{grid-column:span 5;background:#FFFDF6;border:1px solid #E3DCCB;border-radius:14px;padding:18px 24px 16px;display:flex;flex-direction:column;justify-content:center}
-.d-ledger .lhd{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #15140F;padding-bottom:9px;margin-bottom:2px}
-.d-ledger .lhd h3{font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:#15140F}
-.d-ledger .lhd i{font-family:"Geist Mono",monospace;font-style:normal;font-size:8.5px;letter-spacing:.12em;color:#9A9284}
-.d-ledger .row{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid #ECE5D4}
-.d-ledger .row:last-child{border-bottom:none}
-.d-ledger b{font-family:"Geist Mono",monospace;font-size:27px;font-weight:500;color:#B34725;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.d-ledger span{font-size:12.5px;font-weight:500;letter-spacing:.02em;color:#4A473F}
+.d-still{grid-column:span 5;position:relative;border-radius:14px;overflow:hidden;background:#15140F;min-height:180px}
+.d-still img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;animation:drift 26s ease-in-out infinite alternate}
+.d-still .cap{position:absolute;left:14px;bottom:12px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FBFAF7;background:rgba(21,20,15,.55);padding:6px 10px;border-radius:6px;backdrop-filter:blur(6px)}
+.d-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.d-facts span{font-family:"Geist Mono",monospace;font-size:11.5px;letter-spacing:.05em;color:#4A473F;border:1px solid #DDD6C4;background:#FFFDF6;padding:9px 15px;border-radius:999px}
+.d-facts b{color:#B34725;font-weight:500}
 .d-under{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:26px;flex-wrap:wrap}
 .d-under p{font-size:16.5px;line-height:1.6;color:#4A473F;max-width:52ch}
 .d-cta{background:#1F3D2B;color:#F4EFE4;text-decoration:none;font-weight:700;font-size:15px;padding:16px 30px;border-radius:999px;white-space:nowrap}
@@ -187,56 +166,24 @@ a{color:inherit}
         <video autoplay muted loop playsinline preload="metadata" src="video/run.mp4"></video>
         <span class="cap">06:40 · the long way in</span>
       </div>
-      <div class="d-arc">
-        <div class="hd"><h3>The 12-week arc</h3><span class="badge">ILLUSTRATIVE</span></div>
-        <svg viewBox="0 0 340 132" aria-hidden="true">
-          <defs>
-            <linearGradient id="arcfill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#E8B44F" stop-opacity=".28"/>
-              <stop offset="100%" stop-color="#E8B44F" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="arcstroke" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#D9A83E"/>
-              <stop offset="100%" stop-color="#F2C566"/>
-            </linearGradient>
-          </defs>
-          <g class="grid">
-            <line x1="10" y1="104" x2="330" y2="104"/>
-            <line x1="10" y1="72" x2="330" y2="72"/>
-            <line x1="10" y1="40" x2="330" y2="40"/>
-          </g>
-          <line class="phdiv" x1="116" y1="18" x2="116" y2="104"/>
-          <line class="phdiv" x1="223" y1="18" x2="223" y2="104"/>
-          <text class="phase" x="14" y="14">FOUNDATION</text>
-          <text class="phase" x="126" y="14">PROGRESSION</text>
-          <text class="phase" x="233" y="14">SUSTAIN</text>
-          <path class="base" d="M10 100 C 100 99, 220 97, 330 96"/>
-          <text class="basel" x="240" y="90">WITHOUT STRUCTURE</text>
-          <path class="area" d="M10 100 C 95 96, 155 78, 205 56 S 305 24, 330 19 L 330 104 L 10 104 Z"/>
-          <path class="halo" d="M10 100 C 95 96, 155 78, 205 56 S 305 24, 330 19"/>
-          <path class="arcline" d="M10 100 C 95 96, 155 78, 205 56 S 305 24, 330 19"/>
-          <circle class="ring cp1" cx="172" cy="70" r="8"/>
-          <circle class="cp cp1" cx="172" cy="70" r="3.5"/>
-          <text class="cpl cp1" x="130" y="88">WK 6 · CHECK-IN</text>
-          <circle class="ring cp2" cx="330" cy="19" r="8"/>
-          <circle class="cp cp2" cx="330" cy="19" r="3.5"/>
-          <text class="cpl cp2" x="242" y="36">WK 12 · REASSESS</text>
-          <text class="wk" x="10" y="118">W1</text>
-          <text class="wk" x="107" y="118">W4</text>
-          <text class="wk" x="214" y="118">W8</text>
-          <text class="wk" x="314" y="118">W12</text>
-        </svg>
-        <p class="fine">The shape of a structured pathway, not a measured outcome or a promise.</p>
+      <div class="d-still">
+        <img src="img/O_shoes.jpg" alt="">
+        <span class="cap">06:12 · out the door</span>
       </div>
-      <div class="d-ledger">
-        <div class="lhd"><h3>The terms</h3><i>STATED PLAINLY</i></div>
-        <div class="row"><span>Physician reviews your intake in</span><b>24 hr</b></div>
-        <div class="row"><span>Renews on autopilot</span><b>Never</b></div>
-        <div class="row"><span>Cost if you're not approved</span><b>$0</b></div>
+      <div class="d-still">
+        <img src="img/L_living.jpg" alt="">
+        <span class="cap">20:40 · home stretch</span>
       </div>
     </div>
     <div class="d-under">
-      <p>Film for the life, graphics for the proof, photography for the in-between. One warm system where every medium does the job it's best at.</p>
+      <div>
+        <p>Film for the life, photography for the in-between, and the facts stated plainly in type. One warm system where the media does the talking.</p>
+        <div class="d-facts">
+          <span>Physician review in <b>24 hr</b></span>
+          <span>Renews on autopilot: <b>never</b></span>
+          <span>Not approved: <b>$0</b></span>
+        </div>
+      </div>
       <a class="d-cta" href="#d">Find your pathway &rarr;</a>
     </div>
   </div>
@@ -246,7 +193,7 @@ a{color:inherit}
     <div class="d-tile"><video autoplay muted loop playsinline preload="metadata" src="video/train.mp4"></video><span class="cap">21:00 · still in it</span></div>
   </div>
   <div class="spec">
-    <div><h4>System</h4><p>The A/C palette carrying B's ambition. Bone ground, racing green, sienna and amber. Cabinet Grotesk display with Geist Mono data. The signature is the mixed-media collage: film tiles, photographic tiles, and live-drawn instruments share one grid, each captioned by the hour of life it belongs to.</p></div>
+    <div><h4>System</h4><p>The A/C palette carrying B's ambition. Bone ground, racing green, sienna and amber. Cabinet Grotesk display with Geist Mono captions. The signature is the mixed-media collage: film and photography share one grid, each tile captioned by the hour of life it belongs to. The honesty facts live as plain typographic chips, never as dashboard widgets.</p></div>
     <div><h4>Palette</h4><div class="chips"><span class="chip" style="background:#FBFAF7"></span><span class="chip" style="background:#1F3D2B"></span><span class="chip" style="background:#B34725"></span><span class="chip" style="background:#E8B44F"></span><span class="chip" style="background:#15140F"></span></div></div>
     <div><h4>Video plan</h4><p>The clips here are free Pexels placeholders served from our own domain. For launch: Adobe Stock, warm grade, real bodies of different builds, faces incidental. One hero film plus four tile loops covers the whole site.</p></div>
     <div><h4>Why it wins</h4><p>It keeps the honesty devices as graphics, the warmth as ground, and lets film do the emotional lifting. No single-reference genre to be compared against, which is what a first-of-its-kind brand should feel like.</p></div>
