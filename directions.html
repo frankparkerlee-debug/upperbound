@@ -298,5 +298,21 @@ a{color:inherit}
   These are direction studies, not finished pages. Copy is placeholder-grade, imagery is the existing generated set standing in for licensed Adobe Stock film and photography. Pick a direction and the full site gets rebuilt natively inside it, every section, with the real video briefs licensed and cut in.
 </div>
 
+<script>
+(function(){
+  var vids = [].slice.call(document.querySelectorAll('video'));
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var v = e.target;
+      if (e.isIntersecting) { var p = v.play(); if (p) p.catch(function(){}); }
+      else v.pause();
+    });
+  }, {threshold: .15});
+  vids.forEach(function(v){ io.observe(v); });
+  function nudge(){ vids.forEach(function(v){ if (v.paused) { var p = v.play(); if (p) p.catch(function(){}); } }); }
+  document.addEventListener('touchstart', nudge, {once: true, passive: true});
+  document.addEventListener('click', nudge, {once: true});
+})();
+</script>
 </body>
 </html>
