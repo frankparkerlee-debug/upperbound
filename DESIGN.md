@@ -51,7 +51,9 @@ No pure black. No neon, no glow shadows — shadows are warm-tinted
 
 ### Typography — sans only (decided 2026-08-07; do not reintroduce serif)
 
-Family: **Hanken Grotesk** (Google Fonts, ital axis loaded). Mono: system stack.
+Family: **Satoshi** (Fontshare) — chosen from the taste-standard list (Geist /
+Cabinet Grotesk / Satoshi); Hanken and Inter are banned. Mono: system stack.
+Display and manifesto set in Satoshi **Black (900)**; headings 700; body 400–500.
 
 | Level | Size | Weight | Tracking | Use |
 |---|---|---|---|---|
@@ -76,7 +78,7 @@ applied to type. Wordmark: lowercase `upperbound`, sans 700, indigo overbar.
 
 - **Symptom banner** (butter): one recognition line + underlined CTA. Top of page, always.
 - **Pill buttons**: ink fill, oat text, trailing `→` that slides on hover, −1px hover lift, `scale(.985)` press. One primary CTA per view; secondary is an underlined quiet link — never two pills.
-- **Pathway tiles**: color-blocked per pathway (sage/sky/butter/blush), image window, price, Details toggle. Quiz selection outlines the tile in indigo.
+- **Pathway shelf (bento)**: asymmetric spans per magic-ui bento pattern — Recovery 2×2 with media fill, Output 2×1 wide, Composition/Vitality 1×1 text-only on their field colors. Never equal tiles on desktop. Quiz selection outlines the picked tile in indigo.
 - **✓-chips**: white pills with indigo checks, floating on the hero media card with perpetual 5.5s float loops (staggered).
 - **Finder**: white paper card on butter band; 3 questions; result deep-links `/start?pathway=…`.
 - **Scroll-film interlude**: full-bleed photograph + one short line, between card sections. At least one per page; this is what keeps the page from reading hero-grids-footer.
@@ -128,7 +130,9 @@ anything naming the pharmacy or physicians.
 **Never:** medication names or imagery on marketing; outcome/marker claims;
 AI-generated faces; fabricated metrics or testimonials presented as real;
 prepay lock-in offers; serif typefaces; neon glows; centered heroes; equal
-uncolored card grids; Inter.
+uncolored card grids; Inter or Hanken Grotesk; **em dashes in any copy** (the
+definitive AI-writing tell — use commas, colons, or periods; " · " for label
+separators); fake stats or invented metrics.
 
 ## 8. Agent Usage
 
