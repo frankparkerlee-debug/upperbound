@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Upperbound · Direction Studies</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#101013;color:#EDEBE6;font-family:"Satoshi",sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+
+/* switcher */
+.sw{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;gap:4px;padding:10px 16px;background:rgba(16,16,19,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.sw b{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:#8B8880;margin-right:auto}
+.sw a{font-size:12px;letter-spacing:.06em;text-decoration:none;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);color:#EDEBE6}
+.sw a:hover{background:rgba(255,255,255,.1)}
+
+.dir{min-height:100vh;position:relative}
+.spec{padding:56px clamp(20px,5vw,72px) 88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px}
+.spec h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;opacity:.55;margin-bottom:14px}
+.spec p{font-size:14.5px;line-height:1.65;opacity:.85;max-width:46ch}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{width:44px;height:44px;border-radius:10px;border:1px solid rgba(128,128,128,.25)}
+.tag{position:absolute;top:64px;left:clamp(20px,5vw,72px);z-index:5;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;padding:8px 14px;border-radius:999px}
+
+/* ---------- A · THE LEDGER ---------- */
+#a{background:#FBFAF7;color:#15140F;font-family:"Geist",sans-serif}
+#a .tag{background:#15140F;color:#FBFAF7}
+.a-hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,64px);padding:120px clamp(20px,5vw,72px) 64px;align-items:end}
+.a-copy h1{font-size:clamp(44px,6vw,96px);line-height:.98;letter-spacing:-.04em;font-weight:700}
+.a-copy h1 em{font-style:normal;color:#B34725}
+.a-kick{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6E6A60;margin-bottom:26px}
+.a-sub{margin-top:26px;font-size:17px;line-height:1.6;color:#4A473F;max-width:52ch}
+.a-cta{display:inline-block;margin-top:34px;background:#15140F;color:#FBFAF7;text-decoration:none;font-weight:600;font-size:15px;padding:16px 30px;border-radius:8px}
+.a-cta span{margin-left:10px}
+.a-ledger{border-top:2px solid #15140F;margin-top:44px}
+.a-row{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px solid #DDD8CB;font-family:"Geist Mono",monospace}
+.a-row b{font-size:24px;font-weight:500}
+.a-row span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6E6A60}
+.a-media{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#15140F}
+.a-media img{width:100%;height:100%;object-fit:cover;animation:drift 26s ease-in-out infinite alternate}
+.a-media .film{position:absolute;left:14px;bottom:14px;background:rgba(251,250,247,.92);color:#15140F;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em;padding:8px 12px;border-radius:6px}
+#a .spec{border-top:1px solid #DDD8CB}
+#a .spec p{color:#4A473F}
+
+/* ---------- B · NIGHT SHIFT ---------- */
+#b{background:#0B0B10;color:#F2F0EA}
+#b .tag{background:#5B4DFF;color:#fff}
+.b-hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.b-hero .bg{position:absolute;inset:0}
+.b-hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.62;animation:drift 30s ease-in-out infinite alternate}
+.b-hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,16,.35) 0%,rgba(11,11,16,.1) 45%,rgba(11,11,16,.92) 100%)}
+.b-inner{position:relative;z-index:2;padding:0 clamp(20px,5vw,72px) 72px;width:100%}
+.b-inner h1{font-size:clamp(56px,9.5vw,150px);line-height:.92;letter-spacing:-.045em;font-weight:900;text-transform:none}
+.b-inner h1 .var{color:#8F84FF}
+.b-line{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:36px;flex-wrap:wrap}
+.b-line p{font-size:17px;line-height:1.55;max-width:44ch;color:#C9C6BE}
+.b-cta{background:#F2F0EA;color:#0B0B10;text-decoration:none;font-weight:700;font-size:15px;padding:17px 32px;border-radius:999px;white-space:nowrap}
+.b-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0B0B10}
+.b-strip figure{position:relative;aspect-ratio:16/10;overflow:hidden}
+.b-strip img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .4s}
+.b-strip figure:hover img{opacity:1}
+.b-strip figcaption{position:absolute;left:14px;bottom:12px;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#F2F0EA;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+#b .spec{border-top:1px solid rgba(255,255,255,.1)}
+
+/* ---------- C · THE CLUB ---------- */
+#c{background:#F4EFE4;color:#1C2A1E;font-family:"Cabinet Grotesk",sans-serif}
+#c .tag{background:#1F3D2B;color:#F4EFE4}
+.c-hero{min-height:100vh;display:grid;grid-template-rows:auto 1fr;padding:112px clamp(20px,5vw,72px) 0}
+.c-mast{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid #1C2A1E;padding-bottom:18px;flex-wrap:wrap;gap:12px}
+.c-mast h1{font-size:clamp(48px,7.5vw,120px);line-height:.95;letter-spacing:-.03em;font-weight:800}
+.c-mast .iss{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#5C6B58}
+.c-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(18px,3vw,40px);padding:34px 0 64px;align-items:stretch}
+.c-feat{position:relative;border-radius:6px;overflow:hidden;min-height:420px}
+.c-feat img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;animation:drift 24s ease-in-out infinite alternate}
+.c-feat .cap{position:absolute;left:0;bottom:0;right:0;padding:60px 24px 20px;background:linear-gradient(180deg,transparent,rgba(20,28,20,.85));color:#F4EFE4}
+.c-feat .cap b{font-size:26px;font-weight:800;letter-spacing:-.01em;display:block}
+.c-feat .cap span{font-size:13px;opacity:.85}
+.c-side{display:flex;flex-direction:column;gap:16px}
+.c-card{background:#FFFDF6;border:1px solid #DFD8C6;border-radius:6px;padding:24px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.c-card h3{font-size:20px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+.c-card p{font-size:14px;line-height:1.6;color:#4A5546}
+.c-card .go{margin-top:16px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#B34725;text-decoration:none}
+.c-card.green{background:#1F3D2B;border-color:#1F3D2B;color:#F4EFE4}
+.c-card.green p{color:#C9D4C2}
+.c-card.green .go{color:#E8B44F}
+#c .spec{border-top:1px solid #DFD8C6}
+#c .spec p{color:#4A5546}
+
+.note{padding:40px clamp(20px,5vw,72px) 80px;background:#101013;color:#8B8880;font-size:13px;line-height:1.7;max-width:900px}
+
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+@media(max-width:900px){
+  .a-hero{grid-template-columns:1fr;align-items:start;padding-top:104px}
+  .a-media{aspect-ratio:16/10}
+  .b-strip{grid-template-columns:1fr}
+  .c-grid{grid-template-columns:1fr}
+  .c-feat{min-height:320px}
+}
+</style>
+</head>
+<body>
+
+<nav class="sw">
+  <b>Upperbound · direction studies</b>
+  <a href="#a">A · Ledger</a>
+  <a href="#b">B · Night Shift</a>
+  <a href="#c">C · The Club</a>
+</nav>
+
+<!-- =============== A =============== -->
+<section class="dir" id="a">
+  <span class="tag">Direction A · The Ledger</span>
+  <div class="a-hero">
+    <div class="a-copy">
+      <p class="a-kick">Physician-guided performance pathways</p>
+      <h1>Capacity,<br><em>accounted for.</em></h1>
+      <p class="a-sub">A 12-week arc with a physician reading every intake, two scheduled checkpoints, and nothing renewing on autopilot. You pay when you're approved, not before.</p>
+      <a class="a-cta" href="#a">Find your pathway<span>&rarr;</span></a>
+      <div class="a-ledger">
+        <div class="a-row"><span>Arc length</span><b>12 wk</b></div>
+        <div class="a-row"><span>Checkpoints</span><b>2</b></div>
+        <div class="a-row"><span>Cost if not approved</span><b>$0</b></div>
+      </div>
+    </div>
+    <div class="a-media">
+      <img src="img/O_hero.jpg" alt="">
+      <span class="film">FILM SLOT · morning routine, natural light</span>
+    </div>
+  </div>
+  <div class="spec">
+    <div><h4>System</h4><p>Function Health lens, warmed. Bone ground, near-black ink, one burnt-sienna accent. Geist + Geist Mono. The signature device is the ledger: every promise stated as a countable fact with a number beside it. Precision as warmth, because precision is what honesty looks like.</p></div>
+    <div><h4>Palette</h4><div class="chips"><span class="chip" style="background:#FBFAF7"></span><span class="chip" style="background:#15140F"></span><span class="chip" style="background:#B34725"></span><span class="chip" style="background:#DDD8CB"></span></div></div>
+    <div><h4>Video brief</h4><p>Adobe Stock: single continuous shot, one person's ordinary morning executed well. Kitchen to running shoes to door. Natural light, no gym-brand gloss, no faces to camera. 8 to 12 seconds, loopable.</p></div>
+    <div><h4>Why it could win</h4><p>Nobody in the pathway category talks like an honest invoice. It converts the no-prepay and refund-if-declined policies from footnotes into the brand itself.</p></div>
+  </div>
+</section>
+
+<!-- =============== B =============== -->
+<section class="dir" id="b">
+  <span class="tag">Direction B · Night Shift</span>
+  <div class="b-hero">
+    <div class="bg"><img src="img/L_hero.jpg" alt=""></div>
+    <div class="veil"></div>
+    <div class="b-inner">
+      <h1>Your ceiling is<br>a <span class="var">variable.</span></h1>
+      <div class="b-line">
+        <p>Physician-guided pathways for the hours that matter: the early lift, the long day, the evening you still show up for. Reviewed in 24 hours. Nothing renews on autopilot.</p>
+        <a class="b-cta" href="#b">Start your pathway &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="b-strip">
+    <figure><img src="img/L_garage.jpg" alt=""><figcaption>05:50 · the garage</figcaption></figure>
+    <figure><img src="img/L_trail.jpg" alt=""><figcaption>07:10 · the trail</figcaption></figure>
+    <figure><img src="img/L_living.jpg" alt=""><figcaption>21:00 · still in it</figcaption></figure>
+  </div>
+  <div class="spec">
+    <div><h4>System</h4><p>Eight Sleep lens, domesticated. Near-black cinema, monumental Satoshi 900, and the indigo Lifeline as the only light source. The site is a film: full-bleed scenes of real hours in a real life, chaptered by timestamps. Scroll is the edit.</p></div>
+    <div><h4>Palette</h4><div class="chips"><span class="chip" style="background:#0B0B10"></span><span class="chip" style="background:#F2F0EA"></span><span class="chip" style="background:#5B4DFF"></span><span class="chip" style="background:#8F84FF"></span></div></div>
+    <div><h4>Video brief</h4><p>Adobe Stock: warm-lit domestic night and dawn scenes. Garage gym at first light, kitchen before the house wakes, living room at 9pm. Slow push-ins, real bodies of different builds, faces incidental. The Lifeline gets composited as a light ribbon in post.</p></div>
+    <div><h4>Why it could win</h4><p>Video-first, which is now on the table. Dark cinema reads premium instantly, and no telehealth player owns it. The existing Lifeline image set already lives in this world.</p></div>
+  </div>
+</section>
+
+<!-- =============== C =============== -->
+<section class="dir" id="c">
+  <span class="tag">Direction C · The Club</span>
+  <div class="c-hero">
+    <div class="c-mast">
+      <h1>The still&#8209;improving.</h1>
+      <span class="iss">Upperbound · est. 2026 · pathways for ordinary greatness</span>
+    </div>
+    <div class="c-grid">
+      <div class="c-feat">
+        <img src="img/H_summit.jpg" alt="">
+        <div class="cap"><b>You're not done.</b><span>Physician-guided 12-week pathways for people who intend to keep going.</span></div>
+      </div>
+      <div class="c-side">
+        <div class="c-card green">
+          <div><h3>Find your pathway</h3><p>Three questions, thirty seconds. A physician reviews every intake within a day, and it costs nothing to be reviewed.</p></div>
+          <a class="go" href="#c">Take the finder &rarr;</a>
+        </div>
+        <div class="c-card">
+          <div><h3>The Journal</h3><p>Member stories, training notes, and the honest version of what 12 weeks actually feels like. Written like a club newsletter, not a clinic pamphlet.</p></div>
+          <a class="go" href="#c">Read stories &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="spec">
+    <div><h4>System</h4><p>Tracksmith lens, unisex. Warm paper, racing green, amber accents, Cabinet Grotesk at editorial scale. It feels like belonging to something: a masthead, an est. date, a journal. Membership energy without a membership fee.</p></div>
+    <div><h4>Palette</h4><div class="chips"><span class="chip" style="background:#F4EFE4"></span><span class="chip" style="background:#1F3D2B"></span><span class="chip" style="background:#E8B44F"></span><span class="chip" style="background:#B34725"></span></div></div>
+    <div><h4>Video brief</h4><p>Adobe Stock: film-grain athletic-life footage. A lifter chalking up in a home gym, a mom lacing shoes at dawn, a trailhead exhale. 16mm texture, warm grade, the feel of a club film rather than an ad.</p></div>
+    <div><h4>Why it could win</h4><p>Solves the lifter-and-suburban-mom brief through belonging rather than demographics. Editorial warmth ages well and photographs cheaply.</p></div>
+  </div>
+</section>
+
+<div class="note">
+  These are direction studies, not finished pages. Copy is placeholder-grade, imagery is the existing generated set standing in for licensed Adobe Stock film and photography. Pick a direction and the full site gets rebuilt natively inside it, every section, with the real video briefs licensed and cut in.
+</div>
+
+</body>
+</html>
