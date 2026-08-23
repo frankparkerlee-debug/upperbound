@@ -1,143 +1,161 @@
-# Design System — Upperbound
+# Design System — Upperbound (v31 · "The Blend")
 
 Version-controlled source of truth for upperboundrx.com, the patient portal, and
 every AI- or human-generated asset. If an output disagrees with this file, the
-output is wrong. Reference implementation: `mockup.html` / `index.html`.
+output is wrong. Reference implementation: `index.html` (= `mockup.html`).
+Locked 2026-08-23 after four direction studies (`directions.html`, Direction D).
 
 ## 1. Brand Overview
 
-Upperbound is a human performance clinic, online — physician-guided pathways to
-more capacity in ordinary life (the gym, the road, 9pm). Warm, approachable
-pharmacy-wellness in the Hims genre, distinguished by radical honesty devices
-(no prepay, checkpoints, refund-if-declined) and the Lifeline visual motif: the
-brand's rising line, present as the wordmark overbar and as a light ribbon in
-photography. Audience: one voice for both the lifter and the suburban mom.
+Upperbound is a human performance clinic, online: physician-guided 12-week
+pathways to more capacity in ordinary life (the gym, the road, 9pm). The system
+blends three mediums, each doing what it's best at: film for the life,
+photography for the in-between, and plain typography for the honesty facts.
+Warm editorial ground, racing green and sienna, timestamps as the narrative
+device. Audience: one voice for both the lifter and the suburban mom.
 
 ## 2. Visual Identity
 
 ### Color
 
-| Token | Hex | RGB | HSL | Role |
-|---|---|---|---|---|
-| Oat | `#F7F2E9` | 247,242,233 | 39,47%,94% | Page background |
-| Paper | `#FFFDF8` | 255,253,248 | 43,100%,99% | Cards, panels, quiz box |
-| Sand | `#EFE8D9` | 239,232,217 | 41,41%,89% | Footer, secondary fields |
-| Ink | `#26211A` | 38,33,26 | 35,19%,13% | Text, primary CTAs, manifesto band |
-| Muted | `#7B7365` | 123,115,101 | 38,10%,44% | Secondary text |
-| Line | `#E6DECC` | 230,222,204 | 42,34%,85% | Hairlines (solid) |
-| Dot | `#D0C6B1` | 208,198,177 | 41,25%,75% | Dotted rules |
-| Link Indigo | `#4338B8` | 67,56,184 | 245,53%,47% | Links, selection, overbar, ✓ marks — never button fills |
-| Sage | `#DCE5D2` | 220,229,210 | 88,27%,86% | Recovery field, promise band |
-| Sky | `#D8E4EF` | 216,228,239 | 209,42%,89% | Output field, hero media card |
-| Butter | `#F4E3B0` | 244,227,176 | 45,76%,82% | Composition field, finder band |
-| Blush | `#EFDBCF` | 239,219,207 | 23,50%,87% | Vitality field |
-| Banner | `#F4D670` | 244,214,112 | 46,86%,70% | Symptom banner only |
+| Token | Hex | Role |
+|---|---|---|
+| Bone | `#FBFAF7` | Page background |
+| Paper | `#FFFDF6` | Cards, finder, terms |
+| Cream | `#F6EFDD` | Footer, Composition tile, typographic tiles |
+| Ink | `#15140F` | Text, manifesto band, media tile grounds |
+| Body | `#4A473F` | Body copy |
+| Muted | `#6E6A60` | Secondary text, mono labels |
+| Line | `#E3DCCB` | Hairlines, card borders |
+| Racing Green | `#1F3D2B` | Primary CTAs, featured tile, finder band, banner |
+| Green Hover | `#2A5039` | CTA hover only |
+| Sienna | `#B34725` | Keyword accent, kickers, overbar, links-as-actions |
+| Amber | `#E8B44F` | Small accents: bullets, tags, accents on green |
+| Blush tint | `#F4E4DB` | Vitality tile |
 
-Rules: max one action color (Ink). Indigo is an *accent*, capped at links,
-selection states, checkmarks, and the wordmark overbar. No gradients on text.
-No pure black. No neon, no glow shadows — shadows are warm-tinted
-`rgba(64,52,30, …)` only.
+Rules: green fills buttons; sienna never fills buttons (it's the accent and
+keyword color); amber is a garnish, never a ground for text blocks. No pure
+black, no neon, no glow shadows. Shadows warm-tinted only.
 
 ```css
 :root{
-  --oat:#F7F2E9; --paper:#FFFDF8; --sand:#EFE8D9; --ink:#26211A; --muted:#7B7365;
-  --line:#E6DECC; --dot:#D0C6B1; --link:#4338B8;
-  --sage:#DCE5D2; --sky:#D8E4EF; --butter:#F4E3B0; --blush:#EFDBCF; --banner:#F4D670;
-  --serif:"Satoshi",-apple-system,sans-serif; /* alias kept for legacy rules */
-  --sans:"Satoshi",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  /* load: <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet"> */
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --bone:#FBFAF7; --paper:#FFFDF6; --cream:#F6EFDD; --ink:#15140F;
+  --body:#4A473F; --mut:#6E6A60; --line:#E3DCCB;
+  --green:#1F3D2B; --green2:#2A5039; --sienna:#B34725; --amber:#E8B44F;
+  --disp:"Cabinet Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:"Geist Mono",ui-monospace,"SF Mono",monospace;
 }
+/* load:
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+*/
 ```
 
-### Typography — sans only (decided 2026-08-07; do not reintroduce serif)
+### Typography — sans only (do not reintroduce serif)
 
-Family: **Satoshi** (Fontshare) — chosen from the taste-standard list (Geist /
-Cabinet Grotesk / Satoshi); Hanken and Inter are banned. Mono: system stack.
-Display and manifesto set in Satoshi **Black (900)**; headings 700; body 400–500.
+Display/body: **Cabinet Grotesk** (Fontshare). Data/captions/labels: **Geist
+Mono**. Both from the taste-standard list; Inter, Hanken Grotesk, and Satoshi
+(retired v30→v31) are not used.
 
-| Level | Size | Weight | Tracking | Use |
-|---|---|---|---|---|
-| Display | clamp(42px, 5.3vw, 80px) | 900 | −0.03em | Hero h1 |
-| Manifesto | clamp(34px, 5.4vw, 76px) | 900 | −0.03em | Statement beats |
-| H2 | clamp(30px, 3.8vw, 52px) | 700 | −0.02em | Section titles |
-| Tile/H3 | 20–25px | 650 | −0.015em | Cards, steps |
-| Body | 15–17px | 400–500 | 0 | Copy; 65ch max |
-| Kicker/Mono | 9.5–12px | 500 | +0.12–0.2em, uppercase | Eyebrows, labels, ticks |
+| Level | Size | Weight | Tracking |
+|---|---|---|---|
+| H1 masthead | clamp(44px, 6.4vw, 104px) | 800 | −.035em |
+| H2 | clamp(30px, 4vw, 54px) | 800 | −.025em |
+| Tile/H3 | 21–26px | 800 | −.015em |
+| Body | 14.5–16.5px | 400–600 | 0 |
+| Mono labels | 9.5–12px | 500 | +.12–.18em, uppercase |
 
-Keyword device: the emphasized word ("variable.") sets italic 700 in Link
-Indigo with the overbar (`::before` rule above the word) — the logo device
-applied to type. Wordmark: lowercase `upperbound`, sans 700, indigo overbar.
-
-### Spacing, radius, shadow
-
-- Section rhythm: `clamp(56px, 9vh, 104px)`; bands padded `clamp(34px,4.5vw,60px)`.
-- Radius scale: pills `999px` · bands `28px` · tiles `24px` · panels/cards `18–22px` · image windows `12–18px`. Never a single uniform radius everywhere.
-- Shadows (warm): card `0 2px 10px rgba(64,52,30,.05)` · hover `0 18px 40px rgba(64,52,30,.13)` · floating `0 18px 60px rgba(38,33,26,.22)`.
+Keyword device: the emphasized word ("variable.") sets in Sienna, roman (no
+italic). Wordmark: lowercase `upperbound`, 800, with the sienna overbar (34px
+rule above). Ghost footer wordmark at 6% ink.
 
 ## 3. Signature Components
 
-- **Symptom banner** (butter): one recognition line + underlined CTA. Top of page, always.
-- **Pill buttons**: ink fill, oat text, trailing `→` that slides on hover, −1px hover lift, `scale(.985)` press. One primary CTA per view; secondary is an underlined quiet link — never two pills.
-- **Pathway shelf (bento)**: asymmetric spans per magic-ui bento pattern — Recovery 2×2 with media fill, Output 2×1 wide, Composition/Vitality 1×1 text-only on their field colors. Never equal tiles on desktop. Quiz selection outlines the picked tile in indigo.
-- **✓-chips**: white pills with indigo checks, floating on the hero media card with perpetual 5.5s float loops (staggered).
-- **Finder**: white paper card on butter band; 3 questions; result deep-links `/start?pathway=…`.
-- **Scroll-film interlude**: full-bleed photograph + one short line, between card sections. At least one per page; this is what keeps the page from reading hero-grids-footer.
-- **Manifesto beat**: ink band, monumental 800 type, one sentence. Maximum one per page.
-- **Panels**: white cards for the interactive instruments (day curve, 12-week arc) with mono headers and dotted rules.
-- **Entrance choreography**: headline words blur-in sequentially → media card fades up. All motion behind `prefers-reduced-motion`.
+- **Masthead hero**: H1 left, mono issue-line right, over the media collage.
+- **Media collage**: 12-col grid; film panel spans 7×2, two photo stills span
+  5 each. Every media tile carries a **timestamp caption** (mono, blurred
+  smoke chip): `06:40 · the long way in`. Timestamps are the brand's
+  storytelling device: the page is one day in a member's life.
+- **Fact chips**: the honesty facts as plain mono pills on paper
+  (`Physician review in 24 hr · Renews on autopilot: never · Not approved: $0`).
+  NEVER render these as charts, dashboards, or invented visualizations —
+  data-instrument styling was explicitly rejected 2026-08-21.
+- **Pathway shelf**: 4-up bento; Recovery featured on green spanning 2 cols
+  with amber tag; Composition on cream; Vitality on blush tint. Dashed-rule
+  bullet lists with amber dots. Finder result outlines the picked tile sienna.
+- **Interlude**: full-bleed photograph + timestamp + one short line
+  ("Saturday is the point."). At least one per page.
+- **Finder**: paper card on the green band; 3 questions; result deep-links
+  `https://app.upperboundrx.com/start?pathway=…` (real URLs, never anchors).
+- **Day strip**: 3-up mix of video tiles and one cream typographic tile,
+  all timestamped.
+- **Manifesto beat**: ink band, one sentence, max one per page.
+- **Terms card**: paper card, label/value rows, sienna for the emphasized
+  clause. Plain type only.
+- **Pills**: green fill, −1px hover lift, scale(.985) press. One primary CTA
+  per view; secondary is an underlined quiet link.
 
 ## 4. Motion
 
-- Reveal: opacity+translateY, `.7s cubic-bezier(.2,.8,.2,1)`, staggered `--i * 90–110ms` cascades. Never mount lists instantly.
-- Perpetual micro-loops on hero chips only (restraint beats saturation).
-- Images: slow 4–30s scale drifts on hover/ambient. Animate transform/opacity only.
-- Everything disabled under `prefers-reduced-motion`.
+- Reveals: opacity+translateY .7s, staggered `--i * 90ms`.
+- Videos: `autoplay muted loop playsinline` + IntersectionObserver play/pause
+  + one-time touch/click nudge. Compose every video tile to also work as a
+  photograph (iOS Low Power Mode shows the first frame).
+- Stills: slow 26s scale drift.
+- Everything behind `prefers-reduced-motion`.
 
 ## 5. Imagery
 
-- **The Lifeline**: warm, lived-in spaces with a single electric indigo light
-  ribbon (long-exposure style). Current set is AI-generated art direction —
-  replace with commissioned/licensed shots on the same brief.
-- Real humans only via **licensed stock or commissioned shoots** (Adobe Stock).
-  **AI-generated people/faces are banned.** Faceless silhouettes acceptable.
-- Product imagery: welcome-kit packaging on soft fields. **Never medication
-  vials, pens, pills, or dosing paraphernalia on marketing surfaces.**
+- **Real photography and film only. AI-generated imagery is retired from all
+  marketing surfaces** (completed 2026-08-23). Current assets are free-license
+  Pexels placeholders in `img/stock/` and `video/`; replace with a licensed
+  Adobe Stock curation on one consistent warm grade.
+- Brief: warm domestic and athletic life, real bodies of different builds,
+  faces incidental or turned away. Dawn kitchens, garage gyms, trails,
+  9pm living rooms. No race bibs, no visible brand logos, no gym-chain gloss.
+- Never: medication, pens, pills, dosing paraphernalia, AI faces, sterile
+  clinical settings.
 
 ## 6. Voice
 
-Attributes (testable):
-1. **Direct** — "Cancel in two clicks," not "flexible cancellation options."
-2. **Honest to a fault** — name the trade ("Not approved? Full refund."), disclaim illustrations ("not a measured outcome or a promise").
-3. **Life-performance framed** — gym, road, 9pm, toddlers, trailheads; never boardroom or bro-optimization.
-4. **Plain-spoken clinical** — "a physician reads every intake," not "AI-powered care orchestration."
-5. **Warm, not soft** — sentence case, short sentences, no exclamation points.
+1. **Direct**: "Cancel in two clicks," not "flexible cancellation options."
+2. **Honest to a fault**: name the trade; disclaim illustrations; the
+   physician's "no" is part of the brand.
+3. **Life-performance framed**: gym, road, 9pm, toddlers, trailheads. Never
+   boardroom, never bro-optimization.
+4. **Plain-spoken clinical**: "a physician reads every intake."
+5. **Warm, not soft**: sentence case, short sentences, no exclamation points.
+
+Copy is written for the customer. Design commentary ("film for the life…")
+never appears on the page as body copy (violation caught 2026-08-23).
 
 Banned vocabulary: *optimize/optimization, longevity, healthspan, biohack,
-unlock, elevate, seamless, revolutionary, best-in-class, journey (as filler),
-game-changer* — plus **all molecule/compound names, "peptide," "vial," "dose,"
-"compounded," and any outcome claim or invented statistic** on marketing
-surfaces (LegitScript posture; see STRATEGY.md).
+unlock, elevate, seamless, revolutionary, best-in-class, journey (filler),
+game-changer*, plus **all molecule/compound names, "peptide," "vial," "dose,"
+"compounded,"** and any outcome claim, marker claim, or invented statistic on
+marketing surfaces (no-testing model: never claim a marker moved).
 
 ## 7. Guardrails
 
-**Agents may generate freely:** layout/copy iterations within this system;
-social/email drafts in voice; Lifeline-brief object imagery (no people).
+**Agents may generate freely:** layout/copy iterations inside this system;
+email/social drafts in voice; typographic tiles.
 
 **Human review required:** pricing, guarantees/refund language, member
-stories (must be real + permissioned at launch), certification references,
-anything naming the pharmacy or physicians.
+stories (real + permissioned at launch; placeholders must carry the
+"illustrative composites" footnote), pharmacy or physician references.
 
 **Never:** medication names or imagery on marketing; outcome/marker claims;
-AI-generated faces; fabricated metrics or testimonials presented as real;
-prepay lock-in offers; serif typefaces; neon glows; centered heroes; equal
-uncolored card grids; Inter or Hanken Grotesk; **em dashes in any user-facing copy** (the
-definitive AI-writing tell — use commas, colons, or periods; " · " for label
-separators); fake stats or invented metrics.
+AI faces; fabricated metrics or testimonials presented as real; prepay
+lock-in offers; serif typefaces; Inter or Hanken Grotesk; neon glows; pure
+black; centered heroes; equal uncolored card grids; data-instrument widgets
+for brand facts; **em dashes in any user-facing copy** (use commas, colons,
+periods; " · " in labels); marketing CTAs that point at page anchors instead
+of real app URLs.
 
 ## 8. Agent Usage
 
 Load this file before generating anything visual or written for Upperbound.
-Copy the `:root` block verbatim. When this file and an older mockup conflict,
-this file wins. Update this file in the same commit as any deliberate system
-change — the diff is the design decision log.
+Copy the `:root` block verbatim. Every deploy: scan for em dashes and banned
+vocabulary (target: zero), verify CTAs resolve to `app.upperboundrx.com`.
+When this file and an older mockup conflict, this file wins. Update this file
+in the same commit as any deliberate system change.
