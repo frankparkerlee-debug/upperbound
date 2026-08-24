@@ -66,8 +66,19 @@ Hanken Grotesk, and Satoshi are not used.
 | Small labels | 12.5–14px | 600–700 | 0, sentence case |
 
 Keyword device: the emphasized word ("variable.") sets in Sienna, roman (no
-italic). Wordmark: lowercase `upperbound`, 800, with the sienna overbar (34px
-rule above). Ghost footer wordmark at 6% ink.
+italic). Ghost footer wordmark at 6% ink.
+
+### Logo (LOCKED 2026-08-24 · Direction A "The Overbar")
+
+Lowercase `upperbound` in Cabinet Grotesk 800 with a sienna bar above the
+"up". Geometry is measured from glyph ink, not eyeballed: the bar is 1em wide,
+0.15em tall, sits 0.15em above the x-height, left-aligned to the u's ink edge.
+The standalone mark is bar + u as one centered composition (bar 6/7 of u ink
+width, centered over it). App icon: green rounded square, amber bar, bone u.
+Final vector assets (real font outlines, no font dependency): `/brand/
+lockup.svg`, `lockup-on-dark.svg`, `mark.svg`, `mark-on-dark.svg`, `icon.svg`;
+favicon at `/favicon.svg` and portal `src/app/icon.svg`. Decision record:
+`/logos.html`. Do not redraw by hand; regenerate from font outlines.
 
 ## 3. Signature Components
 
