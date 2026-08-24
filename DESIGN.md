@@ -53,9 +53,11 @@ black, no neon, no glow shadows. Shadows warm-tinted only.
 
 ### Typography — sans only (do not reintroduce serif)
 
-Display/body: **Cabinet Grotesk** (Fontshare). Data/captions/labels: **Geist
-Mono**. Both from the taste-standard list; Inter, Hanken Grotesk, and Satoshi
-(retired v30→v31) are not used.
+One family: **Cabinet Grotesk** (Fontshare), for everything including small
+text. Geist Mono was retired 2026-08-24: uppercase, letter-spaced mono
+micro-labels read as robot voice (an AI tell). Small text is 12.5 to 14px
+Cabinet Grotesk, sentence case, normal tracking, weight 600 to 700. Inter,
+Hanken Grotesk, and Satoshi are not used.
 
 | Level | Size | Weight | Tracking |
 |---|---|---|---|
@@ -63,7 +65,7 @@ Mono**. Both from the taste-standard list; Inter, Hanken Grotesk, and Satoshi
 | H2 | clamp(30px, 4vw, 54px) | 800 | −.025em |
 | Tile/H3 | 21–26px | 800 | −.015em |
 | Body | 14.5–16.5px | 400–600 | 0 |
-| Mono labels | 9.5–12px | 500 | +.12–.18em, uppercase |
+| Small labels | 12.5–14px | 600–700 | 0, sentence case |
 
 Keyword device: the emphasized word ("variable.") sets in Sienna, roman (no
 italic). Wordmark: lowercase `upperbound`, 800, with the sienna overbar (34px
@@ -73,10 +75,11 @@ rule above). Ghost footer wordmark at 6% ink.
 
 - **Masthead hero**: H1 left, mono issue-line right, over the media collage.
 - **Media collage**: 12-col grid; film panel spans 7×2, two photo stills span
-  5 each. Every media tile carries a **timestamp caption** (mono, blurred
-  smoke chip): `06:40 · the long way in`. Timestamps are the brand's
-  storytelling device: the page is one day in a member's life.
-- **Fact chips**: the honesty facts as plain mono pills on paper
+  5 each. Every media tile carries a **timestamp caption** (sentence-case
+  sans on a blurred smoke chip): `6:40 am · The long way in`. Twelve-hour,
+  human time, never military. Timestamps are the brand's storytelling
+  device: the page is one day in a member's life.
+- **Fact chips**: the honesty facts as plain sentence-case pills on paper
   (`Physician review in 24 hr · Renews on autopilot: never · Not approved: $0`).
   NEVER render these as charts, dashboards, or invented visualizations —
   data-instrument styling was explicitly rejected 2026-08-21.
@@ -148,7 +151,8 @@ stories (real + permissioned at launch; placeholders must carry the
 AI faces; fabricated metrics or testimonials presented as real; prepay
 lock-in offers; serif typefaces; Inter or Hanken Grotesk; neon glows; pure
 black; centered heroes; equal uncolored card grids; data-instrument widgets
-for brand facts; **em dashes in any user-facing copy** (use commas, colons,
+for brand facts; **uppercase letter-spaced mono micro-labels and 24-hour
+timestamps** (robot voice); **em dashes in any user-facing copy** (use commas, colons,
 periods; " · " in labels); marketing CTAs that point at page anchors instead
 of real app URLs.
 
