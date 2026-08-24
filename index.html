@@ -7,7 +7,6 @@
 <meta name="description" content="Physician-guided 12-week performance pathways, built around the life you already have. Reviewed in 24 hours. $0 if you're not approved.">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -15,21 +14,20 @@
   --line:#E3DCCB; --green:#1F3D2B; --green2:#2A5039; --sienna:#B34725; --amber:#E8B44F;
   --sage:#EAEFE3; --cream:#F6EFDD;
   --disp:"Cabinet Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
-  --mono:"Geist Mono",ui-monospace,"SF Mono",monospace;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bone);color:var(--ink);font-family:var(--disp);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img,video{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:1360px;margin:0 auto;padding:0 clamp(20px,4.5vw,60px)}
-.mono{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:500}
-.cap{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone);background:rgba(21,20,15,.55);padding:6px 10px;border-radius:6px;backdrop-filter:blur(6px)}
+.mono{font-size:13px;color:var(--mut);font-weight:600}
+.cap{position:absolute;left:14px;bottom:12px;font-size:12.5px;font-weight:600;color:var(--bone);background:rgba(21,20,15,.55);padding:6px 11px;border-radius:6px;backdrop-filter:blur(6px)}
 .pill{display:inline-block;background:var(--green);color:#F4EFE4;text-decoration:none;font-weight:700;font-size:15px;padding:15px 28px;border-radius:999px;white-space:nowrap;transition:background .2s,transform .15s}
 .pill:hover{background:var(--green2);transform:translateY(-1px)}
 .pill:active{transform:scale(.985)}
 .quiet{font-weight:600;font-size:14.5px;text-decoration:underline;text-underline-offset:4px;color:var(--body)}
 h2{font-size:clamp(30px,4vw,54px);line-height:1.02;letter-spacing:-.025em;font-weight:800}
-.kick{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sienna);font-weight:500;margin-bottom:14px}
+.kick{font-size:14px;color:var(--sienna);font-weight:700;margin-bottom:12px}
 section{padding:clamp(56px,8.5vh,100px) 0}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*90ms)}
 .rv.on{opacity:1;transform:none}
@@ -61,13 +59,13 @@ section{padding:clamp(56px,8.5vh,100px) 0}
 .under{display:flex;justify-content:space-between;align-items:center;gap:22px;margin-top:26px;flex-wrap:wrap}
 .under p{font-size:16.5px;line-height:1.6;color:var(--body);max-width:54ch}
 .facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.facts span{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--body);border:1px solid #DDD6C4;background:var(--paper);padding:9px 15px;border-radius:999px}
-.facts b{color:var(--sienna);font-weight:500}
+.facts span{font-size:13px;font-weight:500;color:var(--body);border:1px solid #DDD6C4;background:var(--paper);padding:9px 15px;border-radius:999px}
+.facts b{color:var(--sienna);font-weight:700}
 @keyframes drift{from{transform:scale(1)}to{transform:scale(1.07)}}
 
 /* pathways */
 .shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
-.tile .rx{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.tile .rx{font-size:12.5px;color:var(--mut);margin-bottom:10px}
 .tile.feat .rx{color:#9FB598}
 .tile{border-radius:16px;padding:26px 26px 24px;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--paper);position:relative}
 .tile h3{font-size:24px;font-weight:800;letter-spacing:-.015em}
@@ -75,9 +73,9 @@ section{padding:clamp(56px,8.5vh,100px) 0}
 .tile ul{list-style:none;margin:0 0 18px;flex:1}
 .tile li{font-size:13.5px;color:var(--body);padding:7px 0 7px 22px;border-top:1px dashed #D8D0BC;position:relative}
 .tile li::before{content:"";position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--amber)}
-.tile .price{font-family:var(--mono);font-size:13px;color:var(--mut);margin-bottom:14px}
+.tile .price{font-size:13.5px;color:var(--mut);margin-bottom:14px}
 .tile .price b{font-size:22px;color:var(--ink);font-weight:500;letter-spacing:-.02em}
-.tile .go{font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--sienna);text-decoration:none}
+.tile .go{font-size:14.5px;font-weight:700;color:var(--sienna);text-decoration:none}
 .tile .go:hover{text-decoration:underline;text-underline-offset:4px}
 .tile.feat{background:var(--green);border-color:var(--green);color:#F4EFE4}
 .tile.feat .who,.tile.feat li{color:#C9D4C2}
@@ -88,13 +86,13 @@ section{padding:clamp(56px,8.5vh,100px) 0}
 .tile.t-comp{background:var(--cream)}
 .tile.t-vit{background:#F4E4DB;border-color:#EAD2C5}
 .tile.picked{outline:3px solid var(--sienna);outline-offset:2px}
-.tag{position:absolute;top:-11px;right:18px;background:var(--amber);color:var(--ink);font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;padding:5px 11px;border-radius:999px}
+.tag{position:absolute;top:-11px;right:18px;background:var(--amber);color:var(--ink);font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px}
 @media(max-width:980px){.shelf{grid-template-columns:1fr}}
 
 /* how */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px}
-.step .n{font-family:var(--mono);font-size:12px;color:var(--sienna);letter-spacing:.14em}
+.step .n{font-size:13.5px;color:var(--sienna);font-weight:700}
 .step h3{font-size:21px;font-weight:800;margin:12px 0 8px;letter-spacing:-.01em}
 .step p{font-size:14.5px;color:var(--body)}
 @media(max-width:820px){.steps{grid-template-columns:1fr}}
@@ -143,14 +141,14 @@ section{padding:clamp(56px,8.5vh,100px) 0}
 #terms .row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
 #terms .row:last-of-type{border-bottom:none}
 #terms .row span{font-size:15.5px;font-weight:600;color:var(--body)}
-#terms .row b{font-family:var(--mono);font-size:15px;font-weight:500;color:var(--ink);text-align:right;max-width:52ch}
+#terms .row b{font-size:15px;font-weight:600;color:var(--ink);text-align:right;max-width:52ch}
 #terms .row b i{font-style:normal;color:var(--sienna)}
 #terms .cta{display:flex;align-items:center;gap:18px;margin-top:24px;flex-wrap:wrap}
 
 /* stories */
 .stories{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .story{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
-.story .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--sienna)}
+.story .n{font-size:12.5px;color:var(--sienna);font-weight:700}
 .story p{font-size:16px;line-height:1.55;margin:14px 0 18px;flex:1}
 .story .by{font-size:13px;color:var(--mut)}
 .foot-note{font-size:12.5px;color:var(--mut);margin-top:16px}
@@ -170,7 +168,7 @@ footer{background:var(--cream);border-top:1px solid var(--line);padding:56px 0 1
 footer .cols{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
 footer .cols a{display:block;font-size:14px;color:var(--body);text-decoration:none;margin-bottom:9px}
 footer .cols a:hover{color:var(--ink)}
-footer h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:14px;font-weight:500}
+footer h5{font-size:13.5px;color:var(--ink);margin:0 0 14px;font-weight:700}
 footer .legal{font-size:12px;color:var(--mut);line-height:1.7;max-width:900px;margin-top:34px}
 footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.04em;color:rgba(21,20,15,.06);position:absolute;bottom:-.22em;left:0;right:0;text-align:center;pointer-events:none;user-select:none}
 
@@ -203,9 +201,9 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
     <span class="mono">Physician-guided performance pathways</span>
   </div>
   <div class="collage">
-    <div class="film rv"><video autoplay muted loop playsinline preload="metadata" src="video/run.mp4"></video><span class="cap">06:40 · the long way in</span></div>
-    <div class="still rv" style="--i:1"><img src="img/stock/p_stretch.jpg" alt="Stretching on the living room floor before sunrise"><span class="cap">06:05 · before the house wakes</span></div>
-    <div class="still rv" style="--i:2"><img src="img/stock/p_lamp.jpg" alt="A lamp-lit room at the end of the day"><span class="cap">20:40 · home stretch</span></div>
+    <div class="film rv"><video autoplay muted loop playsinline preload="metadata" src="video/run.mp4"></video><span class="cap">6:40 am · The long way in</span></div>
+    <div class="still rv" style="--i:1"><img src="img/stock/p_stretch.jpg" alt="Stretching on the living room floor before sunrise"><span class="cap">6:05 am · Before the house wakes</span></div>
+    <div class="still rv" style="--i:2"><img src="img/stock/p_lamp.jpg" alt="A lamp-lit room at the end of the day"><span class="cap">8:40 pm · Home stretch</span></div>
   </div>
   <div class="under rv">
     <div>
@@ -233,7 +231,7 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
         <li>Week 6: check-in on appetite, habits, and how clothes fit</li>
         <li>Week 12: reassess, then you decide what's next</li>
       </ul>
-      <p class="rx">GLP-1 class therapy · prescribed only if appropriate</p>
+      <p class="rx">Built on GLP-1 class therapy, prescribed only if it's right for you.</p>
       <p class="price"><b>$249</b>/mo · 12-week arc</p>
       <a class="go" href="https://app.upperboundrx.com/start?pathway=weightloss">Start Weight Loss &rarr;</a>
     </div>
@@ -245,7 +243,7 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
         <li>Week 6: check-in on soreness turnaround and sleep</li>
         <li>Week 12: reassess, then you decide what's next</li>
       </ul>
-      <p class="rx">Sermorelin · prescribed only if appropriate</p>
+      <p class="rx">Built on sermorelin, prescribed only if it's right for you.</p>
       <p class="price"><b>$229</b>/mo · 12-week arc</p>
       <a class="go" href="https://app.upperboundrx.com/start?pathway=recovery">Start Recovery &rarr;</a>
     </div>
@@ -257,7 +255,7 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
         <li>Week 6: check-in on afternoon steadiness</li>
         <li>Week 12: reassess, then you decide what's next</li>
       </ul>
-      <p class="rx">NAD+ support · prescribed only if appropriate</p>
+      <p class="rx">Built on NAD+, prescribed only if it's right for you.</p>
       <p class="price"><b>$199</b>/mo · 12-week arc</p>
       <a class="go" href="https://app.upperboundrx.com/start?pathway=output">Start Output &rarr;</a>
     </div>
@@ -268,16 +266,16 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
   <p class="kick rv">How it works</p>
   <h2 class="rv">Three steps. No surprises.</h2>
   <div class="steps">
-    <div class="step rv"><span class="n">01 · TODAY</span><h3>Tell us where the day cracks</h3><p>A five-minute intake about your training, energy, and sleep. It costs nothing to be reviewed, and there's no charge until a physician approves you.</p></div>
-    <div class="step rv" style="--i:1"><span class="n">02 · WITHIN 24 HOURS</span><h3>A physician decides</h3><p>A licensed physician reads every intake personally. If a pathway isn't right for you, they say no, and you pay nothing.</p></div>
-    <div class="step rv" style="--i:2"><span class="n">03 · TWELVE WEEKS</span><h3>Run your arc</h3><p>Your pathway ships to your door. A check-in at week six, a reassessment at week twelve, and nothing renews unless you choose it.</p></div>
+    <div class="step rv"><span class="n">Step 1 · Today</span><h3>Tell us where the day cracks</h3><p>A five-minute intake about your training, energy, and sleep. It costs nothing to be reviewed, and there's no charge until a physician approves you.</p></div>
+    <div class="step rv" style="--i:1"><span class="n">Step 2 · Within a day</span><h3>A physician decides</h3><p>A licensed physician reads every intake personally. If a pathway isn't right for you, they say no, and you pay nothing.</p></div>
+    <div class="step rv" style="--i:2"><span class="n">Step 3 · Twelve weeks</span><h3>Run your arc</h3><p>Your pathway ships to your door. A check-in at week six, a reassessment at week twelve, and nothing renews unless you choose it.</p></div>
   </div>
 </div></section>
 
 <section class="inter">
   <img src="img/stock/p_trail.jpg" alt="A runner climbing a forest trail">
   <div class="veil"></div>
-  <div class="in"><span class="mono">07:10 · THE TRAIL</span><h2>Saturday is the point.</h2></div>
+  <div class="in"><span class="mono">7:10 am · The trail</span><h2>Saturday is the point.</h2></div>
 </section>
 
 <section id="finder"><div class="wrap">
@@ -323,14 +321,14 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
   <p class="kick rv">One day, on pathway</p>
   <h2 class="rv">The hours you get back.</h2>
   <div class="strip">
-    <div class="stile rv"><video autoplay muted loop playsinline preload="metadata" src="video/squat.mp4"></video><span class="cap">05:50 · the garage</span></div>
-    <div class="stile talk rv" style="--i:1"><span class="mono">07:10 · THE TRAIL</span><p>The trail is not going anywhere. The question is whether you are.</p></div>
-    <div class="stile rv" style="--i:2"><video autoplay muted loop playsinline preload="metadata" src="video/late.mp4"></video><span class="cap">21:00 · still in it</span></div>
+    <div class="stile rv"><video autoplay muted loop playsinline preload="metadata" src="video/squat.mp4"></video><span class="cap">5:50 am · The garage</span></div>
+    <div class="stile talk rv" style="--i:1"><span class="mono">7:10 am · The trail</span><p>The trail is not going anywhere. The question is whether you are.</p></div>
+    <div class="stile rv" style="--i:2"><video autoplay muted loop playsinline preload="metadata" src="video/late.mp4"></video><span class="cap">9:00 pm · Still in it</span></div>
   </div>
 </div></section>
 
 <section class="mani"><div class="wrap">
-  <span class="mono rv">WHY WE BUILT IT THIS WAY</span>
+  <span class="mono rv">Why we built it this way</span>
   <h2 class="rv">We'd rather earn twelve months than trap one.</h2>
 </div></section>
 
@@ -353,9 +351,9 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
   <p class="kick rv">Member stories</p>
   <h2 class="rv">People who weren't done.</h2>
   <div class="stories">
-    <div class="story rv"><span class="n">STORY · 001</span><p>"I stopped negotiating with the alarm. That was the whole thing I wanted and I didn't know how to ask for it."</p><span class="by">Recovery pathway · week 9</span></div>
-    <div class="story rv" style="--i:1"><span class="n">STORY · 002</span><p>"The 3pm wall just moved. It's at 9 now, which is fine, because so am I."</p><span class="by">Output pathway · week 12</span></div>
-    <div class="story rv" style="--i:2"><span class="n">STORY · 003</span><p>"My physician said no the first time and told me why. That's the reason I came back."</p><span class="by">Weight Loss pathway · week 4</span></div>
+    <div class="story rv"><span class="n">Story 1</span><p>"I stopped negotiating with the alarm. That was the whole thing I wanted and I didn't know how to ask for it."</p><span class="by">Recovery pathway · week 9</span></div>
+    <div class="story rv" style="--i:1"><span class="n">Story 2</span><p>"The 3pm wall just moved. It's at 9 now, which is fine, because so am I."</p><span class="by">Output pathway · week 12</span></div>
+    <div class="story rv" style="--i:2"><span class="n">Story 3</span><p>"My physician said no the first time and told me why. That's the reason I came back."</p><span class="by">Weight Loss pathway · week 4</span></div>
   </div>
   <p class="foot-note rv">Illustrative composites while we're pre-launch. They'll be replaced with real, permissioned member stories, and nothing else.</p>
 </div></section>
@@ -440,7 +438,7 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
     var c={}; ans.forEach(function(a){ c[a]=(c[a]||0)+1; });
     var w=ans[0]; Object.keys(c).forEach(function(k){ if(c[k]>c[w]) w=k; });
     var d=P[w];
-    document.getElementById('fres-k').textContent='YOUR MATCH';
+    document.getElementById('fres-k').textContent='Your match';
     document.getElementById('fres-t').textContent=d.t;
     document.getElementById('fres-p').textContent=d.p;
     document.getElementById('fres-a').href='https://app.upperboundrx.com/start?pathway='+w;
