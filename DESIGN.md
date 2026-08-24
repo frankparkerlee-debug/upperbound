@@ -25,13 +25,13 @@ device. Audience: one voice for both the lifter and the suburban mom.
 | Cream | `#F6EFDD` | Footer, Composition tile, typographic tiles |
 | Ink | `#15140F` | Text, manifesto band, media tile grounds |
 | Body | `#4A473F` | Body copy |
-| Muted | `#6E6A60` | Secondary text, mono labels |
+| Muted | `#6E6A60` | Secondary text, small labels |
 | Line | `#E3DCCB` | Hairlines, card borders |
 | Racing Green | `#1F3D2B` | Primary CTAs, featured tile, finder band, banner |
 | Green Hover | `#2A5039` | CTA hover only |
 | Sienna | `#B34725` | Keyword accent, kickers, overbar, links-as-actions |
 | Amber | `#E8B44F` | Small accents: bullets, tags, accents on green |
-| Blush tint | `#F4E4DB` | Vitality tile |
+| Blush tint | `#F4E4DB` | Reserve tile tint (unused since 3-pathway cut) |
 
 Rules: green fills buttons; sienna never fills buttons (it's the accent and
 keyword color); amber is a garnish, never a ground for text blocks. No pure
@@ -43,11 +43,9 @@ black, no neon, no glow shadows. Shadows warm-tinted only.
   --body:#4A473F; --mut:#6E6A60; --line:#E3DCCB;
   --green:#1F3D2B; --green2:#2A5039; --sienna:#B34725; --amber:#E8B44F;
   --disp:"Cabinet Grotesk",-apple-system,BlinkMacSystemFont,sans-serif;
-  --mono:"Geist Mono",ui-monospace,"SF Mono",monospace;
 }
 /* load:
 <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 */
 ```
 
@@ -73,7 +71,7 @@ rule above). Ghost footer wordmark at 6% ink.
 
 ## 3. Signature Components
 
-- **Masthead hero**: H1 left, mono issue-line right, over the media collage.
+- **Masthead hero**: H1 left, quiet issue-line right, over the media collage.
 - **Media collage**: 12-col grid; film panel spans 7×2, two photo stills span
   5 each. Every media tile carries a **timestamp caption** (sentence-case
   sans on a blurred smoke chip): `6:40 am · The long way in`. Twelve-hour,
@@ -83,9 +81,11 @@ rule above). Ghost footer wordmark at 6% ink.
   (`Physician review in 24 hr · Renews on autopilot: never · Not approved: $0`).
   NEVER render these as charts, dashboards, or invented visualizations —
   data-instrument styling was explicitly rejected 2026-08-21.
-- **Pathway shelf**: 4-up bento; Recovery featured on green spanning 2 cols
-  with amber tag; Composition on cream; Vitality on blush tint. Dashed-rule
-  bullet lists with amber dots. Finder result outlines the picked tile sienna.
+- **Pathway shelf**: three tiles: Weight Loss featured on green with amber
+  "Most popular" tag, Recovery on paper, Output on cream. Dashed-rule bullet
+  lists with amber dots; each tile carries a one-line therapy sentence
+  ("Built on GLP-1 class therapy, prescribed only if it's right for you.").
+  Finder result outlines the picked tile sienna.
 - **Interlude**: full-bleed photograph + timestamp + one short line
   ("Saturday is the point."). At least one per page.
 - **Finder**: paper card on the green band; 3 questions; result deep-links
@@ -134,9 +134,12 @@ never appears on the page as body copy (violation caught 2026-08-23).
 
 Banned vocabulary: *optimize/optimization, longevity, healthspan, biohack,
 unlock, elevate, seamless, revolutionary, best-in-class, journey (filler),
-game-changer*, plus **all molecule/compound names, "peptide," "vial," "dose,"
-"compounded,"** and any outcome claim, marker claim, or invented statistic on
-marketing surfaces (no-testing model: never claim a marker moved).
+game-changer*. Therapy naming (2026-08-23, licensed-telehealth posture):
+**allowed** are "GLP-1 class," "NAD+," and "sermorelin," stated factually with
+"prescribed only if it's right for you." **Still banned:** brand or generic
+drug names beyond those three (never semaglutide/tirzepatide), "peptide,"
+"vial," "compounded," all dosing content, and any outcome claim, marker
+claim, or invented statistic (no-testing model: never claim a marker moved).
 
 ## 7. Guardrails
 
