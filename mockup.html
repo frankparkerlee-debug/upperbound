@@ -396,7 +396,8 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
         <a href="https://app.upperboundrx.com/start">Start your intake</a>
       </div>
     </div>
-    <p class="legal">Upperbound connects you with independent licensed physicians for consultation and, where appropriate, treatment. A pathway is prescribed only if a physician determines it's right for you, and treatment is included in your pathway price. Individual experiences vary and nothing on this page is a promise of a specific result. Upperbound is not for emergencies; if you're experiencing a medical emergency, call 911. © 2026 Upperbound. All rights reserved.</p>
+    <p class="legal" style="margin-top:34px;margin-bottom:0"><a href="/terms.html" style="color:inherit">Terms of Service</a> · <a href="/privacy.html" style="color:inherit">Privacy Policy</a> · <a href="/telehealth-consent.html" style="color:inherit">Telehealth Consent</a></p>
+    <p class="legal" style="margin-top:10px">Upperbound connects you with independent licensed physicians for consultation and, where appropriate, treatment. A pathway is prescribed only if a physician determines it's right for you, and treatment is included in your pathway price. Individual experiences vary and nothing on this page is a promise of a specific result. Upperbound is not for emergencies; if you're experiencing a medical emergency, call 911. © 2026 Upperbound. All rights reserved.</p>
   </div>
   <div class="ghost">upperbound</div>
 </footer>
@@ -420,6 +421,18 @@ footer .ghost{font-weight:800;font-size:clamp(80px,14vw,220px);letter-spacing:-.
   function nudge(){ vids.forEach(function(v){ if(v.paused){ var p=v.play(); if(p)p.catch(function(){}); } }); }
   document.addEventListener('touchstart',nudge,{once:true,passive:true});
   document.addEventListener('click',nudge,{once:true});
+
+  // first-party funnel telemetry (no cookies, no third parties)
+  function beacon(name, meta){
+    try{ navigator.sendBeacon('https://app.upperboundrx.com/api/event', JSON.stringify({name:name, meta:meta||{}})); }catch(e){}
+  }
+  beacon('marketing_page_view', {path: location.pathname});
+  document.querySelectorAll('a[href*="app.upperboundrx.com/start"]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var u = new URL(el.href);
+      beacon('marketing_cta_click', {pathway: u.searchParams.get('pathway') || 'none'});
+    });
+  });
 
   // finder
   var P={
