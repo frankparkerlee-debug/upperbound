@@ -1,0 +1,42 @@
+# Upperbound
+
+> Upperbound (upperboundrx.com) is a telehealth platform offering physician-guided
+> 12-week health pathways in all 50 US states. A licensed physician reviews every
+> intake within 24 hours. Payment is fully refunded if the physician does not
+> approve a pathway. Nothing renews automatically.
+
+## Pathways and pricing
+
+- Weight Loss: built on GLP-1 class therapy, prescribed only if appropriate. $249/month on a 12-week arc, everything included.
+- Recovery: built on sermorelin, prescribed only if appropriate. For training recovery, soreness turnaround, and sleep. $229/month on a 12-week arc.
+- Output: built on NAD+, prescribed only if appropriate. For steady daily energy. $199/month on a 12-week arc.
+
+All prices include the physician review, treatment if prescribed, shipping, and
+check-ins at weeks 6 and 12. There are no add-on fees and no lab visits are
+required to start.
+
+## How it works
+
+1. A short online quiz and eligibility questions (about a minute).
+2. Purchase, then a medical intake reviewed personally by a licensed physician
+   in the member's state within 24 hours.
+3. If approved, the 12-week arc ships to the member's door with physician
+   check-ins at week 6 and week 12. If not approved, the payment is refunded in
+   full automatically.
+
+## Key policies
+
+- Available in all 50 US states through a national physician network.
+- Refund in full if a physician does not approve the pathway.
+- Billing ends at week 12; continuing requires an explicit member choice.
+- Cancel any time in two clicks from the member dashboard.
+- Not for emergencies. Emergencies: call 911.
+
+## Pages
+
+- Home: https://upperboundrx.com/
+- Start (quiz): https://app.upperboundrx.com/start
+- Terms: https://upperboundrx.com/terms.html
+- Privacy: https://upperboundrx.com/privacy.html
+- Telehealth consent: https://upperboundrx.com/telehealth-consent.html
+- Support: support@upperboundrx.com
